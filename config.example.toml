@@ -7,7 +7,8 @@ entry_message = """
 # this doesn't actually need to have administrator permissions,
 # it's just a marker for the bot.
 admin_role = 1234
-# the channel that newcomers will use to enter the password
+# the channel that newcomers will be reminded to enter the password
+# if 0, disable the welcome message
 entry_channel = 5678
 # the role that will be granted to people that entered the password
 grant_role = 9876

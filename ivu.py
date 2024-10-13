@@ -11,13 +11,15 @@ class IvuBot(bot_bin.bot.Bot):
 	]
 	def __init__(self, *args, **kwargs):
 		intents = discord.Intents.default()
-		intents.members = True
-		super().__init__(*args, intents=intents, **kwargs)
 
-def main():
-	with open('config.toml') as f:
-		config = toml.load(f)
-	IvuBot(config=config).run()
+		with open('config.toml') as f:
+			config = toml.load(f)
+
+		# only enable member join event if we really need it
+		if config['ids']['entry_channel']:
+			intents.members = True
+
+		super().__init__(*args, intents=intents, config=config, **kwargs)
 
 if __name__ == '__main__':
-	main()
+	IvuBot().run()
