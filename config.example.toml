@@ -2,6 +2,9 @@
 entry_message = """
 """
 
+# link to the source code of the bot
+repo = 'https://github.com/Willow-et-al/ivu-bot'
+
 [ids]
 # the role required to use the set-password command.
 # this doesn't actually need to have administrator permissions,

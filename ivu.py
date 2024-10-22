@@ -8,6 +8,7 @@ class IvuBot(bot_bin.bot.Bot):
 	startup_extensions = [
 		'jishaku',
 		'cogs.ivu',
+		'cogs.meta',
 	]
 	def __init__(self, *args, **kwargs):
 		intents = discord.Intents.default()
