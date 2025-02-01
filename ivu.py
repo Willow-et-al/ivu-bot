@@ -6,6 +6,7 @@ import qtoml as toml
 
 class IvuBot(bot_bin.bot.Bot):
 	startup_extensions = [
+		'bot_bin.systemd',
 		'jishaku',
 		'cogs.ivu',
 		'cogs.meta',
